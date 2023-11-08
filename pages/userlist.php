@@ -1,18 +1,181 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <style>
         h1 {
-            color: white;
+            background: linear-gradient(90deg, red, white);
+            color: transparent;
             text-align: center;
+            margin: 0;
+            padding: 20px 0; 
+            font-size: 40px;
+            font-family: "Rhodium Libre", Times, serif;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
-    <h1>this the user list</h1>
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+    <h1>Employee User List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Task</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Vince Olemberio</td>
+                <td>johndoe@example.com</td>
+                <td>
+                    <select id="taskSelect1">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(1)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>janesmith@example.com</td>
+                <td>
+                    <select id="taskSelect2">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(2)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Alice Johnson</td>
+                <td>alice@example.com</td>
+                <td>
+                    <select id="taskSelect3">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(3)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bob Anderson</td>
+                <td>bob@example.com</td>
+                <td>
+                    <select id="taskSelect4">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(4)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Mary Johnson</td>
+                <td>mary@example.com</td>
+                <td>
+                    <select id="taskSelect5">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(5)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Lord binns</td>
+                <td>binns@example.com</td>
+                <td>
+                    <select id="taskSelect6">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(6)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Library Smith</td>
+                <td>library@example.com</td>
+                <td>
+                    <select id="taskSelect6">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(6)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mitch Smith</td>
+                <td>mich@example.com</td>
+                <td>
+                    <select id="taskSelect6">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(6)">Assign Task</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Dan Mark</td>
+                <td>mark@example.com</td>
+                <td>
+                    <select id="taskSelect6">
+                        <option value="none">Select Task</option>
+                        <option value="task1">Task 1</option>
+                        <option value="task2">Task 2</option>
+                    </select>
+                    <button onclick="assignTask(6)">Assign Task</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function assignTask(employeeId) {
+            const taskSelect = document.getElementById(`taskSelect${employeeId}`);
+            const selectedTask = taskSelect.value;
+            
+            if (selectedTask !== 'none') {
+                // You can implement backend logic to assign the task to the employee
+                alert(`Assigned Task '${selectedTask}' to Employee ID ${employeeId}`);
+            } else {
+                alert('Please select a task to assign.');
+            }
+        }
+    </script>
 </body>
 </html>
-

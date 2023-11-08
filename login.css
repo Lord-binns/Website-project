@@ -30,3 +30,17 @@ body {
     border-radius: 40px; /* You can adjust the value to your preference */
   }
  
+  .success-alert {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+  }
+
+  .error-alert {
+      background-color: #f44336;
+      color: white;
+      padding: 10px;
+      text-align: center;
+  }
+ 

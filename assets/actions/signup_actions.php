@@ -1,5 +1,5 @@
 <?php
     session_start();
-     $_SESSION['userID']=1;
+     $_SESSION['signID']=1;
 
      echo 'Sign up Successful!';
