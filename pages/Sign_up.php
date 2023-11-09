@@ -169,7 +169,7 @@
 
     function displayWarning(message) {
         var warningAlert = $('<div class="warning-alert"></div>');
-        warningAlert.css('background-color', 'red'); // Make the background red
+        warningAlert.css('background-color', 'red');  
         warningAlert.text(message);
         $("body").prepend(warningAlert);
 

@@ -7,8 +7,8 @@
             background: linear-gradient(90deg, red, white);
             color: transparent;
             text-align: center;
-            margin: 0; /* Remove margin to have no spacing around h1 */
-            padding: 50px 0; /* Add padding to control spacing above and below h1 */
+            margin: 0; 
+            padding: 50px 0; 
             font-size: 70px;
             font-family: "Rhodium Libre", Times, serif;
             -webkit-background-clip: text;
@@ -19,12 +19,12 @@
             background: linear-gradient(90deg, red, white);
             color: transparent;
             text-align: center;
-            padding: 10px 0; /* Add padding to control spacing above and below h1 */
+            padding: 10px 0;
             font-size: 48px;
             font-family: "Rhodium Libre", Times, serif;
             -webkit-background-clip: text;
             background-clip: text;
-            margin: 10px 0; /* Add margin to control spacing above and below h2 */
+            margin: 10px 0; 
         }
        .about-card {
             margin: 20px;
@@ -32,9 +32,9 @@
     </style>
 </head>
 <body>
-      <!-- Your About Us content here -->
+      
 <h1 style="text-align: center; ;">About Syncminer Innovators</h1>
-    <h2 style="text-align: center; ;"> This project is the collaboration of Syncminer Technology and Data Miners</h2>
+    <h2 style="text-align: center; ;"> This project is the collaboration of Synchronize Technology and Data Miners</h2>
     <div class="container">
         <div class="row">
             <div class="col-lg-4">

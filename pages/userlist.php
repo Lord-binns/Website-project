@@ -21,7 +21,7 @@
         }
 
         th, td {
-            border: 1px solid #dddddd;
+            border: 2px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
@@ -29,6 +29,14 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
+        .taskSelect6 button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
     </style>
 </head>
 <body>
@@ -47,7 +55,7 @@
             <tr>
                 <td>1</td>
                 <td>Vince Olemberio</td>
-                <td>johndoe@example.com</td>
+                <td>qwerty@example.com</td>
                 <td>
                     <select id="taskSelect1">
                         <option value="none">Select Task</option>
@@ -123,42 +131,42 @@
                 </td>
             </tr>
             <tr>
-                <td>6</td>
+                <td>7</td>
                 <td>Library Smith</td>
                 <td>library@example.com</td>
                 <td>
-                    <select id="taskSelect6">
+                    <select id="taskSelect7">
                         <option value="none">Select Task</option>
                         <option value="task1">Task 1</option>
                         <option value="task2">Task 2</option>
                     </select>
-                    <button onclick="assignTask(6)">Assign Task</button>
+                    <button onclick="assignTask(7)">Assign Task</button>
                 </td>
             </tr>
             <tr>
-                <td>6</td>
+                <td>8</td>
                 <td>Mitch Smith</td>
                 <td>mich@example.com</td>
                 <td>
-                    <select id="taskSelect6">
+                    <select id="taskSelect8">
                         <option value="none">Select Task</option>
                         <option value="task1">Task 1</option>
                         <option value="task2">Task 2</option>
                     </select>
-                    <button onclick="assignTask(6)">Assign Task</button>
+                    <button onclick="assignTask(8)">Assign Task</button>
                 </td>
             </tr>
             <tr>
-                <td>6</td>
+                <td>9</td>
                 <td>Dan Mark</td>
                 <td>mark@example.com</td>
                 <td>
-                    <select id="taskSelect6">
+                    <select id="taskSelect9">
                         <option value="none">Select Task</option>
                         <option value="task1">Task 1</option>
                         <option value="task2">Task 2</option>
                     </select>
-                    <button onclick="assignTask(6)">Assign Task</button>
+                    <button onclick="assignTask(9)">Assign Task</button>
                 </td>
             </tr>
         </tbody>
@@ -170,7 +178,7 @@
             const selectedTask = taskSelect.value;
             
             if (selectedTask !== 'none') {
-                // You can implement backend logic to assign the task to the employee
+                
                 alert(`Assigned Task '${selectedTask}' to Employee ID ${employeeId}`);
             } else {
                 alert('Please select a task to assign.');

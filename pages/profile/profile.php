@@ -5,24 +5,28 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #333;
-            color: #fff;
+            color: #ccc;
         }
 
         .profile-container {
             width: 80%;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: #000;
             color: #333;
-            border: 1px solid #ccc;
+            border: 3px solid #ccc;
             border-radius: 5px;
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
+        .profile-box {
+            border-color: white;
+        }
         .profile-image {
             width: 150px;
             height: 150px;
+            padding: 20px;
+            border-color: white;
             border-radius: 50%;
             margin-right: 20px;
             float: left;
@@ -34,7 +38,8 @@
         }
 
         table, th, td {
-            border: 1px solid #ddd;
+            border: 2px solid #000;
+            background-color: #ccc;
         }
 
         th, td {
@@ -43,12 +48,15 @@
         }
 
         .edit-button {
-            background-color: #000;
-            color: #fff;
-            border: none;
+            background-color: #FF0000;
+            color: #ccc;
+            border: #ccc;
             border-radius: 5px;
-            padding: 10px 20px;
+            padding: 10px;
             cursor: pointer;
+        }
+        .editbutton {    
+            padding: 10px;
         }
 
         .edit-button:hover {
@@ -56,19 +64,41 @@
         }
 
         .save-button {
-            background-color: #000;
+            background-color: #FF0000;
             color: #fff;
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
             cursor: pointer;
         }
+        h1 {
+            background: linear-gradient( red,white );
+            color: transparent;
+            text-align: center;
+            margin: 0; 
+            padding: 20px; 
+            font-size: 50px;
+            font-family: "Arial", sans-serif ;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        h2{
+            color: #ccc;
+            padding: 10px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
+
     <div class="profile-container">
-        <img src="https://i.pinimg.com/originals/6f/1f/ca/6f1fca4f4980a5f08cd45582487ac7f7.gif" alt="Profile Image" class="profile-image">
-        <h1>My Profile</h1>
+
+        <div class="profile-box">
+        <img src="https://i.pinimg.com/originals/6f/1f/ca/6f1fca4f4980a5f08cd45582487ac7f7.gif" alt="Profile Image" class="profile-image" >
+       </div>
+<h1> Personal Profile</h1>
+
+
         <table>
             <tr>
                 <th>Full Name:</th>
@@ -84,15 +114,21 @@
             </tr>
             <tr>
                 <th>Address:</th>
-                <td><span id="address">Manolo Fortich, bukidnon, Philippines</span></td>
+                <td><span id="address">Manolo Fortich, Bukidnon, Philippines</span></td>
             </tr>
             <tr>
                 <th>Password</th>
                 <td><span id="address">****************</span></td>
             </tr>
         </table>
-        <button class="edit-button" onclick="editBasicInfo()">Edit Information</button>
+
+        <div class="editbutton">
+        <button class="edit-button" onclick="editBasicInfo()">
+    <i class="fas fa-edit"></i> Edit Information
+</button>
+
         <button class="save-button" style="display: none;" onclick="saveBasicInfo()">Save</button>
+    </div>
     </div>
 
     <script>

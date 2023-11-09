@@ -6,8 +6,8 @@
             background: linear-gradient(90deg, red, white);
             color: transparent;
             text-align: center;
-            margin: 0; /* Remove margin to have no spacing around h1 */
-            padding: 20px 0; /* Add padding to control spacing above and below h1 */
+            margin: 0; 
+            padding: 20px 0; 
             font-size: 20px;
             font-family: "Rhodium Libre", Times, serif;
             -webkit-background-clip: text;
