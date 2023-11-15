@@ -102,7 +102,7 @@
     <div class="profile-container">
 
         <div class="profile-box">
-        <img src="https://i.pinimg.com/originals/6f/1f/ca/6f1fca4f4980a5f08cd45582487ac7f7.gif" alt="Profile Image" class="profile-image" >
+        <img src="https://i.pinimg.com/originals/f5/63/0d/f5630ddc114edca5dfec76ae5996b152.gif" alt="Profile Image" class="profile-image" >
        </div>
 <h1> Personal Profile</h1>
 

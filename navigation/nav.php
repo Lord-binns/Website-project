@@ -32,8 +32,8 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -250px; /* Adjust the width of the off-canvas sidebar */
-    background-color: #333; /* Background color for the sidebar */
+    left: -250px;  
+    background-color: #333;  
     transition: left 0.3s;
   }
   .offcanvas.show {
@@ -44,7 +44,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
   <div class="container-fluid">
   <button type="button" class="btn btn-light bg-transparent me-3" data-bs-toggle="offcanvas" data-bs-target="#settingsSidebar">
-  <i class="fas fa-bars text-white"></i> <!-- Change the icon color to white -->
+  <i class="fas fa-bars text-white"></i>  
 </button>
 
     <a class="navbar-brand text-danger" href="#">SYNCMINERS</a>
@@ -85,16 +85,15 @@
     </div>
   </div>
 </nav>
-<!-- Off-canvas sidebar for settings dashboard -->
+ 
 <div class="offcanvas offcanvas-start" id="settingsSidebar">
   <div class="offcanvas-header text-center">
-    <h3 class="offcanvas-title" style="color: white;"> More</h3>
+    <h3 class="offcanvas-title" style="color: white;"> More </h3>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
     </button>
   </div>
   <div class="offcanvas-body" style="background-color: white; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-    <!-- Add your settings content here -->
-    <!-- This is where you can add settings and configure the dashboard -->
+   
     <ul class="nav flex-column">
       <li class="nav-item">
         <a href="#userList" class="nav-link text-dark" id="userListLink">
@@ -116,15 +115,14 @@
 <script>
   document.querySelectorAll('.nav-link').forEach(function(item) {
     item.addEventListener('click', function() {
-        // Remove active class from all nav items
+      
         document.querySelectorAll('.nav-link').forEach(function(navItem) {
             navItem.classList.remove('active');
         });
-
-        // Add active class to the clicked nav item
+ 
         item.classList.add('active');
 
-        // Call respective functions based on the clicked nav item
+ 
         if (item.id === 'aboutUsLink') {
             to_aboutUs();
         } else if (item.id === 'homeLink') {
@@ -138,7 +136,7 @@
         } else if (item.id === 'profileLink') {
             to_profile();
         
-            // Handle the profile link click if needed
+ 
         }
     });
 });
@@ -179,7 +177,7 @@
         function confirmLogOut() {
     var confirmed = confirm("Are you sure you want to log out?");
     if (confirmed) {
-        log_out(); // Proceed with the logout if the user confirms
+        log_out();  
     }
 }
         function log_out() {

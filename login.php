@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
     <title>Log in Page</title>
 </head>
 <body>
@@ -24,6 +24,7 @@
         text-align: center;
     }
 </style>
+
 <!-- Log in frame -->
 <div class="container text-center" id="frame">
     <div class="center-frame"> 
@@ -49,7 +50,7 @@
                                 <div class="col-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck"> Log in as user?</label>
+                                        <label class="form-check-label" for="gridCheck"> Save password for next log in?</label>
                                     </div>
                                 </div>
                                 <div id="log in">
@@ -82,31 +83,31 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script>
         function to_login() {
-            // Get the values of the email and password fields
+            
             var email = $("#username").val();
             var password = $("#password").val();
 
-            // Check if both email and password are not empty
+            
             if (email.trim() === '' || password.trim() === '') {
                 displayError("Please enter both email and password.");
                 return;
             }
 
-            // Check if the email is not a proper email format
+          
             if (!isValidEmail(email)) {
                 displayError("Please enter a valid email address.");
                 return;
             }
 
-            // Simulate a successful login (you can replace this with your actual logic)
+           
             $.post("assets/actions/login_actions.php", {
-                email: email, // Pass the email to the server
-                password: password // Pass the password to the server
+                email: email, 
+                password: password 
             }, function (data) {
                 if (data === 'Log in Successful!') {
                     localStorage.clear();
                     displaySuccess("Log in successful");
-                    window.location.href = 'index.php'; // Check if this path is correct
+                    window.location.href = 'index.php'; 
                 } else {
                     displayError("Login failed. Please check your credentials.");
                 }
@@ -114,7 +115,7 @@
         }
 
         function isValidEmail(email) {
-            // Simple email validation regex
+             
             var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
             return emailPattern.test(email);
         }
@@ -123,29 +124,26 @@
             $("#error-alert").html('<div class="success-alert">' + message + '</div>');
             setTimeout(function () {
                 $("#error-alert").empty();
-            }, 3000); // Remove after 3 seconds (adjust as needed)
+            }, 3000);
         }
 
         function displayError(message) {
             $("#error-alert").html('<div class="error-alert">' + message + '</div>');
             setTimeout(function () {
                 $("#error-alert").empty();
-            }, 3000); // Remove after 3 seconds (adjust as needed)
+            }, 3000); 
         }
 
         function to_sign_up() {
-            // Hide the frame
+           
             $("#frame").hide();
 
-            // Load the content after Sign up
+        
             $.post("pages/Sign_up.php", {}, function (data) {
                 $("#nocontents").html(data).show();
             });
         }
-           // Function to navigate to the sign-up page
-        //    function to_sign_up() {
-        //     window.location.href = 'pages/Sign_up.php';
-        // }
+          
     </script>
 </body>
 </html>
