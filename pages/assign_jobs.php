@@ -8,7 +8,7 @@
             text-align: center;
             margin: 0; 
             padding: 20px 0; 
-            font-size: 20px;
+            font-size: 30px;
             font-family: "Rhodium Libre", Times, serif;
             -webkit-background-clip: text;
             background-clip: text;

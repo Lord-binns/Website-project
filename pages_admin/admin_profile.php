@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
+<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #333;
@@ -19,15 +19,14 @@
             padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .profile-box {
-            border-color: white;
-        }
+         
+         
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 200px;
             padding: 20px;
             border-color: white;
-            border-radius: 50%;
+            border-radius: 60%;
             margin-right: 20px;
             float: left;
         }
@@ -71,21 +70,13 @@
             padding: 10px 20px;
             cursor: pointer;
         }
-        .cancel-button {
-            background-color: #FF0000;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
         h1 {
             background: linear-gradient( red,white );
             color: transparent;
             text-align: center;
             margin: 0; 
             padding: 20px; 
-            font-size: 50px;
+            font-size: 70px;
             font-family: "Arial", sans-serif ;
             -webkit-background-clip: text;
             background-clip: text;
@@ -100,12 +91,10 @@
 <body>
 
     <div class="profile-container">
-
         <div class="profile-box">
-        <img src="https://i.pinimg.com/originals/6f/1f/ca/6f1fca4f4980a5f08cd45582487ac7f7.gif" alt="Profile Image" class="profile-image" >
-       </div>
-<h1> Personal Profile</h1>
-
+            <img src="https://media.tenor.com/A0hQdblb2yUAAAAC/project-mugen-bansy.gif" alt="Profile Image" class="profile-image">
+        </div>
+        <h1> Admin Profile</h1>
 
         <table>
             <tr>
@@ -125,8 +114,12 @@
                 <td><span id="address">Manolo Fortich, Bukidnon, Philippines</span></td>
             </tr>
             <tr>
-                <th>Password</th>
-                <td><span id="address">****************</span></td>
+                <th>Password:</th>
+                <td><span id="password">****************</span></td>
+            </tr>
+            <tr>
+                <th>Hobbies:</th>
+                <td><span id="hobbies">Reading, Traveling</span></td>
             </tr>
         </table>
 
@@ -136,30 +129,27 @@
             </button>
 
             <button class="save-button" style="display: none;" onclick="saveBasicInfo()">Save</button>
-            <!-- <button class="cancel-button" style="display: none; background-color: #ccc; color: #333;" onclick="cancelEdit()">Cancel</button> -->
         </div>
     </div>
 
     <script>
-        let originalContent; 
-
         function editBasicInfo() {
-       
-            originalContent = {
-                fullName: document.getElementById('fullName').innerText,
-                email: document.getElementById('email').innerText,
-                phone: document.getElementById('phone').innerText,
-                address: document.getElementById('address').innerText
-            };
+            const fullName = document.getElementById('fullName').innerText;
+            const email = document.getElementById('email').innerText;
+            const phone = document.getElementById('phone').innerText;
+            const address = document.getElementById('address').innerText;
+            const password = document.getElementById('password').innerText;
+            const hobbies = document.getElementById('hobbies').innerText;
 
-            document.getElementById('fullName').innerHTML = `<input type="text" id="fullNameInput" value="${originalContent.fullName}">`;
-            document.getElementById('email').innerHTML = `<input type="text" id="emailInput" value="${originalContent.email}">`;
-            document.getElementById('phone').innerHTML = `<input type="text" id="phoneInput" value="${originalContent.phone}">`;
-            document.getElementById('address').innerHTML = `<input type="text" id="addressInput" value="${originalContent.address}">`;
+            document.getElementById('fullName').innerHTML = `<input type="text" id="fullNameInput" value="${fullName}">`;
+            document.getElementById('email').innerHTML = `<input type="text" id="emailInput" value="${email}">`;
+            document.getElementById('phone').innerHTML = `<input type="text" id="phoneInput" value="${phone}">`;
+            document.getElementById('address').innerHTML = `<input type="text" id="addressInput" value="${address}">`;
+            document.getElementById('password').innerHTML = `<input type="password" id="passwordInput" value="${password}">`;
+            document.getElementById('hobbies').innerHTML = `<input type="text" id="hobbiesInput" value="${hobbies}">`;
 
             document.querySelector('.edit-button').style.display = 'none';
             document.querySelector('.save-button').style.display = 'block';
-            document.querySelector('.cancel-button').style.display = 'block';
         }
 
         function saveBasicInfo() {
@@ -167,28 +157,19 @@
             const emailInput = document.getElementById('emailInput').value;
             const phoneInput = document.getElementById('phoneInput').value;
             const addressInput = document.getElementById('addressInput').value;
+            const passwordInput = document.getElementById('passwordInput').value;
+            const hobbiesInput = document.getElementById('hobbiesInput').value;
 
             document.getElementById('fullName').innerText = fullNameInput;
             document.getElementById('email').innerText = emailInput;
             document.getElementById('phone').innerText = phoneInput;
             document.getElementById('address').innerText = addressInput;
+            document.getElementById('password').innerText = passwordInput;
+            document.getElementById('hobbies').innerText = hobbiesInput;
 
             document.querySelector('.edit-button').style.display = 'block';
             document.querySelector('.save-button').style.display = 'none';
-            document.querySelector('.cancel-button').style.display = 'none';
-        }
-
-        function cancelEdit() {
-            document.getElementById('fullName').innerText = originalContent.fullName;
-            document.getElementById('email').innerText = originalContent.email;
-            document.getElementById('phone').innerText = originalContent.phone;
-            document.getElementById('address').innerText = originalContent.address;
-
-            document.querySelector('.edit-button').style.display = 'block';
-            document.querySelector('.save-button').style.display = 'none';
-            document.querySelector('.cancel-button').style.display = 'none';
         }
     </script>
-
 </body>
 </html>

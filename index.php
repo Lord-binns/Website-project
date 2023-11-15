@@ -4,10 +4,12 @@ session_start();
 if (!isset($_SESSION['userID'])) {
     
     echo "<script>localStorage.clear();window.location.href='login.php';</script>";
-    echo "<script>localStorage.clear();window.location.href='pages/Sign_up.php';</script>";
+    
+    
     
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ if (!isset($_SESSION['userID'])) {
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>My Portfolio</title>
+    <title>Lord-Binns</title>
 </head>
 
 <body>
@@ -28,9 +30,8 @@ if (!isset($_SESSION['userID'])) {
  </div>
   <div id="contents">
   </div>
-  <div id="user_contents">
+  <div id="adcontents">
   </div>
-
 <!-- -----SCRIPTS----- ------>
 
     <script src="assets/js/jquery-3.7.1.js"></script>
@@ -39,5 +40,6 @@ if (!isset($_SESSION['userID'])) {
    
     
 </body>
+
 
 </html>
