@@ -19,15 +19,13 @@
             padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .profile-box {
-            border-color: white;
-        }
+
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 200px;
             padding: 20px;
             border-color: white;
-            border-radius: 50%;
+            border-radius: 60%;
             margin-right: 20px;
             float: left;
         }
@@ -48,14 +46,15 @@
         }
 
         .edit-button {
-            background-color: #FF0000;
+            background-color: red;
             color: #ccc;
             border: #ccc;
             border-radius: 5px;
-            padding: 10px;
+            
             cursor: pointer;
         }
-        .editbutton {    
+
+        .editbutton {
             padding: 10px;
         }
 
@@ -68,29 +67,34 @@
             color: #fff;
             border: none;
             border-radius: 5px;
-            padding: 10px 20px;
+          
             cursor: pointer;
         }
+     
+
         .cancel-button {
-            background-color: #FF0000;
+            background-color: blue;
             color: #fff;
-            border: none;
+            border: white;
             border-radius: 5px;
-            padding: 10px 20px;
+            margin-top: 4px;
             cursor: pointer;
+           
         }
+
         h1 {
-            background: linear-gradient( red,white );
+            background: linear-gradient(red, white);
             color: transparent;
             text-align: center;
-            margin: 0; 
-            padding: 20px; 
-            font-size: 50px;
-            font-family: "Arial", sans-serif ;
+            margin: 0;
+            padding: 20px;
+            font-size: 70px;
+            font-family: "Arial", sans-serif;
             -webkit-background-clip: text;
             background-clip: text;
         }
-        h2{
+
+        h2 {
             color: #ccc;
             padding: 10px;
             font-size: 20px;
@@ -102,7 +106,7 @@
     <div class="profile-container">
 
         <div class="profile-box">
-        <img src="https://i.pinimg.com/originals/6f/1f/ca/6f1fca4f4980a5f08cd45582487ac7f7.gif" alt="Profile Image" class="profile-image" >
+        <img src="https://i.pinimg.com/originals/f5/63/0d/f5630ddc114edca5dfec76ae5996b152.gif" alt="Profile Image" class="profile-image" >
        </div>
 <h1> Personal Profile</h1>
 
@@ -136,7 +140,8 @@
             </button>
 
             <button class="save-button" style="display: none;" onclick="saveBasicInfo()">Save</button>
-            <!-- <button class="cancel-button" style="display: none; background-color: #ccc; color: #333;" onclick="cancelEdit()">Cancel</button> -->
+            <button class="cancel-button" style="display: none;" onclick="cancelBasicInfo()">Cancel</button>
+           
         </div>
     </div>
 
@@ -184,6 +189,24 @@
             document.getElementById('phone').innerText = originalContent.phone;
             document.getElementById('address').innerText = originalContent.address;
 
+            document.querySelector('.edit-button').style.display = 'block';
+            document.querySelector('.save-button').style.display = 'none';
+            document.querySelector('.cancel-button').style.display = 'none';
+        }
+        
+        function cancelBasicInfo() {
+            const fullNameOriginal = "Lord Binns";  
+            const emailOriginal = "vince.olemberio2004@gmail.com"; 
+            const phoneOriginal = "0917 897 678"; 
+            const addressOriginal = "Manolo Fortich, Bukidnon, Philippines";  
+            const passwordOriginal = "****************";  
+ 
+
+            document.getElementById('fullName').innerText = fullNameOriginal;
+            document.getElementById('email').innerText = emailOriginal;
+            document.getElementById('phone').innerText = phoneOriginal;
+            document.getElementById('address').innerText = addressOriginal;
+           
             document.querySelector('.edit-button').style.display = 'block';
             document.querySelector('.save-button').style.display = 'none';
             document.querySelector('.cancel-button').style.display = 'none';

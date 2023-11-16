@@ -49,7 +49,7 @@
             </div>
             <div class="col-lg-4 d-flex">
                 <div class="card about-card flex-fill">
-                    <img src="https://assets.website-files.com/5daaade3e3e3f04da71daa8e/60c9d40039e3533cb7d9373f_GIFs%20in%20Emails.gif" class="card-img-top" alt="Image 2">
+                    <img src="https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif" class="card-img-top" alt="Image 2">
                     <div class="card-body">
                         <h5 class="card-title text-center"> Email</h5>
                         <p class="card-text">info@syncminerinnovators.com</p>

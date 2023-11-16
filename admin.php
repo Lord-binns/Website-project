@@ -49,7 +49,7 @@
         <button type="button" class="btn btn-light bg-transparent me-3" data-bs-toggle="offcanvas" data-bs-target="#settingSidebar">
             <i class="fas fa-bars text-white"></i> 
         </button>
-        <a class="navbar-brand text-danger" href="#">SYNCMINERS - ADMIN</a>
+        <a class="navbar-brand text-primary" href="#">SYNCMINERS - ADMIN</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

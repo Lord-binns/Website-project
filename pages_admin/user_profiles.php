@@ -12,7 +12,7 @@
         }
 
         h1 {
-            background: linear-gradient(90deg, red, white);
+            background: linear-gradient(90deg, blue, white);
             color: transparent;
             text-align: center;
             margin: 0;
