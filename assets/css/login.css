@@ -1,18 +1,11 @@
 
-body {
-      
-    background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/05/17/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg');
-    background-size: cover;
-    /* background-attachment: fixed; */
-    background-repeat: no-repeat;
-}
-
+ 
 .center-frame {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: transparent; /* Make the background transparent */
+    background-color: transparent;  
    
 }
   body {
@@ -27,7 +20,7 @@ body {
     height: 100%;
     width: 100%;
     font-size: 14px;
-    border-radius: 40px; /* You can adjust the value to your preference */
+    border-radius: 40px;  
   }
  
   .success-alert {
@@ -38,9 +31,19 @@ body {
   }
 
   .error-alert {
-      background-color: #f44336;
+      background-color: rgb(175, 2, 2);
       color: white;
       padding: 10px;
       text-align: center;
   }
- 
+  .navbar {
+    display: flex;
+    background-color: black;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
