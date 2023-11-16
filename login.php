@@ -5,25 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
     <title>Log in Page</title>
 </head>
 <body>
+ 
 
-<style>
-    .success-alert {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .error-alert {
-        background-color: #f44336;
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
-</style>
 
 <!-- Log in frame -->
 <div class="container text-center" id="frame">
@@ -34,6 +22,10 @@
                     <div class="row">
                         <div class="col-7 bg-white">
                             <!-- LEFT MARKER -->
+                          
+                            <div class="navbar" id="gbutton">
+    <a href="#" class="nav-link back-btn" onclick="goBack()"><i class="fas fa-arrow-left"></i>Back</a>
+</div>
                             <div class="text-dark"><h2>SYNCMINER INNOVATORS</h2></div> 
                             <div class="col-12">
                                 <div class="input-group mb-3">
@@ -47,10 +39,10 @@
                                 <div class="container">
                                     <div class="text-danger" id="error-alert"></div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-10">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck"> Save password for next log in?</label>
+                                        <label class="form-check-label" for="gridCheck">Save password for next login?</label>
                                     </div>
                                 </div>
                                 <div id="log in">
@@ -137,6 +129,7 @@
         function to_sign_up() {
            
             $("#frame").hide();
+            $("#gbutton").hide();
 
         
             $.post("pages/Sign_up.php", {}, function (data) {
@@ -144,6 +137,10 @@
             });
         }
           
+        function goBack() {
+  
+  window.location.href = "dashboard.php";
+}  
     </script>
 </body>
 </html>
