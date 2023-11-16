@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #333;
@@ -19,11 +20,10 @@
             padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-         
-         
+
         .profile-image {
-            width: 250px;
-            height: 200px;
+            width: 270px;
+            height: 250px;
             padding: 20px;
             border-color: white;
             border-radius: 60%;
@@ -47,14 +47,15 @@
         }
 
         .edit-button {
-            background-color: #FF0000;
+            background-color: blue;
             color: #ccc;
             border: #ccc;
             border-radius: 5px;
-            padding: 10px;
+            
             cursor: pointer;
         }
-        .editbutton {    
+
+        .editbutton {
             padding: 10px;
         }
 
@@ -67,32 +68,47 @@
             color: #fff;
             border: none;
             border-radius: 5px;
-            padding: 10px 20px;
+          
             cursor: pointer;
         }
+     
+
+        .cancel-button {
+            background-color: blue;
+            color: #fff;
+            border: white;
+            border-radius: 5px;
+            margin-top: 4px;
+            cursor: pointer;
+           
+        }
+
         h1 {
-            background: linear-gradient( red,white );
+            background: linear-gradient(blue, black);
             color: transparent;
             text-align: center;
-            margin: 0; 
-            padding: 20px; 
-            font-size: 70px;
-            font-family: "Arial", sans-serif ;
+            margin: 0;
+            padding: 30px;
+            font-size: 100px;
+            font-family: "Arial", sans-serif;
             -webkit-background-clip: text;
             background-clip: text;
         }
-        h2{
+
+        h2 {
             color: #ccc;
             padding: 10px;
             font-size: 20px;
         }
     </style>
 </head>
+
 <body>
 
     <div class="profile-container">
         <div class="profile-box">
-            <img src="https://media.tenor.com/A0hQdblb2yUAAAAC/project-mugen-bansy.gif" alt="Profile Image" class="profile-image">
+            <img src="https://media.tenor.com/A0hQdblb2yUAAAAC/project-mugen-bansy.gif" alt="Profile Image"
+                class="profile-image">
         </div>
         <h1> Admin Profile</h1>
 
@@ -129,6 +145,7 @@
             </button>
 
             <button class="save-button" style="display: none;" onclick="saveBasicInfo()">Save</button>
+            <button class="cancel-button" style="display: none;" onclick="cancelBasicInfo()">Cancel</button>
         </div>
     </div>
 
@@ -150,6 +167,7 @@
 
             document.querySelector('.edit-button').style.display = 'none';
             document.querySelector('.save-button').style.display = 'block';
+            document.querySelector('.cancel-button').style.display = 'block';
         }
 
         function saveBasicInfo() {
@@ -169,7 +187,29 @@
 
             document.querySelector('.edit-button').style.display = 'block';
             document.querySelector('.save-button').style.display = 'none';
+            document.querySelector('.cancel-button').style.display = 'none';
+        }
+
+        function cancelBasicInfo() {
+            const fullNameOriginal = "Lord Binns";  
+            const emailOriginal = "vince.olemberio2004@gmail.com"; 
+            const phoneOriginal = "0917 897 678"; 
+            const addressOriginal = "Manolo Fortich, Bukidnon, Philippines";  
+            const passwordOriginal = "****************";  
+            const hobbiesOriginal = "Reading, Traveling";  
+
+            document.getElementById('fullName').innerText = fullNameOriginal;
+            document.getElementById('email').innerText = emailOriginal;
+            document.getElementById('phone').innerText = phoneOriginal;
+            document.getElementById('address').innerText = addressOriginal;
+            document.getElementById('password').innerText = passwordOriginal;
+            document.getElementById('hobbies').innerText = hobbiesOriginal;
+
+            document.querySelector('.edit-button').style.display = 'block';
+            document.querySelector('.save-button').style.display = 'none';
+            document.querySelector('.cancel-button').style.display = 'none';
         }
     </script>
 </body>
+
 </html>
